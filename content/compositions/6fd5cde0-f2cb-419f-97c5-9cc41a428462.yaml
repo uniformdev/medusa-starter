@@ -1,0 +1,23 @@
+composition:
+  _name: About Us
+  _id: 6fd5cde0-f2cb-419f-97c5-9cc41a428462
+  _slug: /about
+  type: page
+  parameters:
+    metaTitle:
+      type: text
+      value: About Us
+  slots:
+    content:
+      - _id: cef680b1-63d7-449d-a034-b2aeb8b5282d
+        type: hero
+        parameters:
+          title:
+            type: text
+            value: About Us
+          description:
+            type: text
+            value: Learn something here
+created: '2023-01-09T01:11:37.049038+00:00'
+modified: '2023-01-09T01:11:55.28208+00:00'
+pattern: false

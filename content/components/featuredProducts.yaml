@@ -1,0 +1,28 @@
+id: featuredProducts
+name: Featured Products
+icon: list
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: products
+    name: Products
+    type: medusa-product-selector
+    helpText: ''
+    typeConfig:
+      multiSelect: true
+      allowedCollections:
+        pcol_01GMNH7YD3EANAXKVRHB7KK63E:
+          id: pcol_01GMNH7YD3EANAXKVRHB7KK63E
+          name: Monitors
+        pcol_01GMNH87C30FH24K6PMQZPQE0Q:
+          id: pcol_01GMNH87C30FH24K6PMQZPQE0Q
+          name: Laptops
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-01-08T23:07:57.935404+00:00'
+updated: '2023-01-08T23:08:21.585072+00:00'

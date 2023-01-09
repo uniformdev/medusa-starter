@@ -1,14 +1,20 @@
 composition:
-  _id: 26667348-5cd1-4185-b5a0-8413e1e87117
-  type: page
   _name: Home
+  _id: 26667348-5cd1-4185-b5a0-8413e1e87117
   _slug: /
+  type: page
+  parameters:
+    metaTitle:
+      type: text
+      value: Home
   slots:
     content:
-      - type: $personalization
+      - _id: e8a8c770-ee6c-4b03-8c9f-21b98db6a3b6
+        type: $personalization
         slots:
           pz:
-            - type: hero
+            - _id: 4c11865c-838c-4a49-9674-219d0740e0c0
+              type: hero
               parameters:
                 title:
                   type: text
@@ -28,7 +34,8 @@ composition:
                     signal has a score.</p>
 
                     <p>Check dev tools for more logging info.</p> 
-            - type: hero
+            - _id: b6b4ebb7-d4ef-4871-a1c2-3900d4344d43
+              type: hero
               parameters:
                 title:
                   type: text
@@ -42,15 +49,32 @@ composition:
                     href="/?utm_campaign=launch">now</a>!</p>
         parameters:
           count:
-            type: text
+            type: number
             value: '1'
           trackingEventName:
             type: text
             value: Home Hero
-  parameters:
-    metaTitle:
-      type: text
-      value: Home
-created: '2022-07-28T02:15:48.244994+00:00'
-modified: '2022-07-28T04:17:25.626569+00:00'
+      - _id: 4094a64b-4dc1-4a68-8a48-82b788802620
+        type: productPromo
+        parameters:
+          product:
+            type: medusa-product-selector
+            value:
+              productIds:
+                - prod_01GMT4V7HS4WV407V7MMF8HTGZ
+      - _id: 007d925d-91c6-43b6-8f74-5768d6607143
+        type: featuredProducts
+        parameters:
+          title:
+            type: text
+            value: Cool products for 2023
+          products:
+            type: medusa-product-selector
+            value:
+              productIds:
+                - prod_01GMT4FW1MSPJF89Q58GZ9RJRT
+                - prod_01GMT4V7HS4WV407V7MMF8HTGZ
+                - prod_01GMR02PW8BJEC3A4FP02G5V1W
+created: '2023-01-08T23:02:42.064822+00:00'
+modified: '2023-01-09T01:21:10.658687+00:00'
 pattern: false
