@@ -1,9 +1,6 @@
 import { GetStaticPropsContext } from "next";
 import PageComposition from "@/components/PageComposition";
-import {
-  getCompositionBySlug,
-  getCompositionsForNavigation,
-} from "lib/uniform/canvasClient";
+import { getCompositionBySlug } from "lib/uniform/canvasClient";
 
 const CanvasPage = (props) => PageComposition(props);
 
@@ -19,11 +16,9 @@ export async function getServerSideProps(context: GetStaticPropsContext) {
     ? slugString
     : `/${slugString}`;
   const composition = await getCompositionBySlug(slashedSlug, context);
-  const navLinks = await getCompositionsForNavigation(preview);
   return {
     props: {
       composition,
-      navLinks,
       preview,
     },
   };

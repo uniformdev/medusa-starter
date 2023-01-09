@@ -14,7 +14,6 @@ type ProductPromoProp = ComponentProps<{
 const ProductPromo: React.FC<ProductPromoProp> = ({
   product,
 }: ProductPromoProp) => {
-  console.log({ product });
   const productPrice =
     product.variants[0].prices.find((v) => v.currency_code === "usd").amount /
     100;

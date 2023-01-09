@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export interface NavigationProps {
-  navLinks: Array<NavLink>;
+  navLinks?: Array<NavLink>;
 }
 
 export interface NavLink {
@@ -9,24 +9,21 @@ export interface NavLink {
   url: string;
 }
 
-const Navigation: React.FC<NavigationProps> = ({
-  navLinks,
-}: NavigationProps) => {
-  if (!navLinks) {
-    return null;
-  }
+const Navigation: React.FC<NavigationProps> = () => {
   return (
     <div className="navigation">
-      {navLinks.map((e: NavLink, i: number) => (
-        <span key={i}>
-          <Link href={e.url}>{e.title}</Link>
-        </span>
-      ))}
-      {navLinks.length <= 1 ? (
-        <span className="note">
-          (create a new composition to see a link to it here...)
-        </span>
-      ) : null}
+      <span>
+        <Link href={"/"}>Home</Link>
+      </span>
+      <span>
+        <Link href={"/shop/laptops"}>Shop Laptops</Link>
+      </span>
+      <span>
+        <Link href={"/shop/monitors"}>Shop Monitors</Link>
+      </span>
+      <span>
+        <Link href={"/about"}>About Us</Link>
+      </span>
     </div>
   );
 };

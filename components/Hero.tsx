@@ -9,13 +9,13 @@ type HeroProps = ComponentProps<{
 }>;
 
 const Hero: React.FC<HeroProps> = ({ title, description }: HeroProps) => (
-  <>
+  <div>
     <h1 className="title">{title}</h1>
     <div
       className="description"
       dangerouslySetInnerHTML={{ __html: description }}
     />
-  </>
+  </div>
 );
 
 registerUniformComponent({
